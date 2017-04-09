@@ -5,8 +5,12 @@ filetype plugin indent on
 
 runtime macros/matchit.vim
 
-set background=dark
 colorscheme solarized
+if strftime("%H") >= 5 && strftime("%H") <= 17
+  set background=light
+else
+  set background=dark
+endif
 hi! link Visual CursorLine
 hi LineNr guibg=NONE
 
@@ -70,6 +74,7 @@ augroup statline_trail
 augroup END
 
 set statusline=
+set statusline+=col:\ %c,
 set statusline+=%6*%m%r%*                          " modified, readonly
 set statusline+=\ 
 set statusline+=%5*%{expand('%:h')}/               " relative path to file's directory
@@ -100,9 +105,11 @@ set showbreak=↪>
 set scrolloff=3
 set display+=lastline
 
-set shiftwidth=2
-set tabstop=2
-set expandtab
+"set shiftwidth=2
+set shiftwidth=4
+"set tabstop=2
+"set expandtab
+set softtabstop=0 noexpandtab
 
 set title
 
@@ -140,14 +147,14 @@ nnoremap <expr> K getline('.')[col('.') - 1] == ' ' ? "r<CR>" : "i<CR><ESC>l"
 
 
 " Show tabs and trailing whitespace visually.
-if &listchars ==# 'eol:$'
-  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
-  if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
-    let &listchars = "tab:\u21e5 ,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
-  endif
-endif
+"if &listchars ==# 'eol:$'
+"  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+"  if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
+"    let &listchars = "tab:\u21e5 ,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
+"  endif
+"endif
 autocmd InsertEnter * set nolist
-autocmd InsertLeave * set list
+"autocmd InsertLeave * set list
 
 " Highlight non-ASCII characters.
 " syntax match nonascii "[^\x00-\x7F]"

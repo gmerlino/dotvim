@@ -7,10 +7,10 @@ jlanzarotta/bufexplorer
 justinmk/vim-dirvish
 kopischke/vim-fetch
 torbiak/probe
-/Users/andy/code/src/vim-rooter
+airblade/vim-rooter
 
 # git
-/Users/andy/code/src/vim-gitgutter
+airblade/vim-gitgutter
 
 # Colours
 altercation/vim-colors-solarized
@@ -33,13 +33,13 @@ vim-ruby/vim-ruby
 sunaku/vim-ruby-minitest
 
 # Miscellaneous
-/Users/andy/code/src/vim-accent
+airblade/vim-accent
 conradirwin/vim-bracketed-paste
 tpope/vim-characterize
 tpope/vim-commentary
 tpope/vim-endwise
-/Users/andy/code/src/vim-helptab
-/Users/andy/code/src/vim-localorie
+airblade/vim-helptab
+airblade/vim-localorie
 tpope/vim-projectionist
 tpope/vim-repeat
 tpope/vim-surround
@@ -52,5 +52,5 @@ tpope/vim-eunuch
 Z1MM32M4N/vim-superman
 
 # Plugin management
-/Users/andy/code/src/voom
+airblade/voom
 
